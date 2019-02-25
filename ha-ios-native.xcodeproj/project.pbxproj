@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E1A21BE2224237E00ACDEBC /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7E1A21BC2224237E00ACDEBC /* HockeySDKResources.bundle */; };
+		7E1A21BF2224237E00ACDEBC /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1A21BD2224237E00ACDEBC /* HockeySDK.framework */; };
 		7EDA5FEB221D3BFD00C4CA2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA5FEA221D3BFD00C4CA2E /* AppDelegate.swift */; };
 		7EDA5FED221D3BFD00C4CA2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA5FEC221D3BFD00C4CA2E /* ViewController.swift */; };
 		7EDA5FF0221D3BFD00C4CA2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDA5FEE221D3BFD00C4CA2E /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E1A21BC2224237E00ACDEBC /* HockeySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HockeySDKResources.bundle; sourceTree = "<group>"; };
+		7E1A21BD2224237E00ACDEBC /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
 		7EDA5FE7221D3BFD00C4CA2E /* ha-ios-native.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ha-ios-native.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDA5FEA221D3BFD00C4CA2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EDA5FEC221D3BFD00C4CA2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E1A21BF2224237E00ACDEBC /* HockeySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,9 +81,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E1A21BA2224235000ACDEBC /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				7E1A21BB2224237E00ACDEBC /* HockeySDK.embeddedframework */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		7E1A21BB2224237E00ACDEBC /* HockeySDK.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				7E1A21BC2224237E00ACDEBC /* HockeySDKResources.bundle */,
+				7E1A21BD2224237E00ACDEBC /* HockeySDK.framework */,
+			);
+			name = HockeySDK.embeddedframework;
+			path = "ha-ios-native/Vendor/HockeySDK.embeddedframework";
+			sourceTree = SOURCE_ROOT;
+		};
 		7EDA5FDE221D3BFD00C4CA2E = {
 			isa = PBXGroup;
 			children = (
+				7E1A21BA2224235000ACDEBC /* Vendor */,
 				7EDA5FE9221D3BFD00C4CA2E /* ha-ios-native */,
 				7EDA6001221D3BFE00C4CA2E /* ha-ios-nativeTests */,
 				7EDA600C221D3BFE00C4CA2E /* ha-ios-nativeUITests */,
@@ -233,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EDA5FF8221D3BFE00C4CA2E /* LaunchScreen.storyboard in Resources */,
+				7E1A21BE2224237E00ACDEBC /* HockeySDKResources.bundle in Resources */,
 				7EDA5FF5221D3BFE00C4CA2E /* Assets.xcassets in Resources */,
 				7EDA5FF0221D3BFD00C4CA2E /* Main.storyboard in Resources */,
 			);
@@ -438,6 +463,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2L8TU8NEV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ha-ios-native/Vendor/HockeySDK.embeddedframework",
+				);
 				INFOPLIST_FILE = "ha-ios-native/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +485,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2L8TU8NEV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ha-ios-native/Vendor/HockeySDK.embeddedframework",
+				);
 				INFOPLIST_FILE = "ha-ios-native/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
